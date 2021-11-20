@@ -1,0 +1,68 @@
+
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col" class="text-left">Tournaments</th>
+                    <th scope="col" class="text-left">Publish</th>
+                    <th scope="col" class="text-left"></th>
+                    <th scope="col" class="text-left"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let tour of tournaments; let i = index" [class.active]="i == currentIndex" (click)="setActiveTournament(tour, i)">
+                    <td>{{i+1}}</td>
+                    <!-- <td class="text-left" (click)="LoadMatches(tour.key)">  -->
+                    <td class="text-left">
+                        <h4>{{tour.title}}</h4>
+                    </td>
+
+                    <td>
+                        <mat-slide-toggle [(ngModel)]="tour.published" (change)="updateTournament()"></mat-slide-toggle>
+                    </td>
+                    <td>
+                        <mat-icon (click)="addTournament()">edit</mat-icon>
+                    </td>
+                    <td>
+                        <mat-icon (click)="deleteTournament()">delete</mat-icon>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+
+
+    <button mat-fab class="mat-primary add-btn-round" aria-label="" (click)="addTournament()">
+        <mat-icon>add</mat-icon>
+    </button>
+
+     <!-- <p-table [value]="tournaments" responsiveLayout="scroll">
+        <ng-template pTemplate="header">
+            <tr>
+               <th scope="col">#</th> 
+                <th scope="col" class="text-left">Tournaments</th>
+                <th scope="col" class="text-left">Publish</th>
+                <th scope="col" class="text-left"></th>
+                <th scope="col" class="text-left"></th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-tour>
+            <tr>
+                     <td>{{i+1}}</td> 
+                    <td class="text-left" (click)="LoadMatches(tour.key)"> 
+                    <td class="text-left">
+                        <h4>{{tour.title}}</h4>
+                    </td>
+
+                    <td>
+                        <mat-slide-toggle [(ngModel)]="tour.published" (change)="updateTournament()"></mat-slide-toggle>
+                    </td>
+                    <td>
+                        <mat-icon (click)="addTournament()">edit</mat-icon>
+                    </td>
+                    <td>
+                        <mat-icon (click)="deleteTournament()">delete</mat-icon>
+                    </td>
+            </tr>
+        </ng-template>
+    </p-table>  -->

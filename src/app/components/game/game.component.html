@@ -1,0 +1,49 @@
+<div class="container-fluid">
+    <div class="row p-3">
+        <div class="col col-6 text-center">
+            <h4>Team A</h4>
+            <h1>{{TeamLeftScore}}</h1>
+        </div>
+        <div class="col col-6  text-center">
+            <h4>Team B</h4>
+            <h1>{{TeamRightScore}}</h1>
+        </div>
+    </div>
+
+    <div class="row g-2">
+        <div class="col-6 text-center align-self-center ">
+            <div class="border bg-light">
+                <div [className]="isActive ? 'serveCourt courtSize' : 'ground courtSize'">
+                    <h3>{{leftTop.player}}</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class=" align-middle border bg-light">
+                <div [className]="isActive ? 'serveCourt courtSize' : 'ground courtSize'">
+                    <h3>{{rightTop.player}}</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="border bg-light">
+                <div [className]="isActive ? 'serveCourt courtSize' : 'ground courtSize'">
+                    <h3>{{leftBot.player}}</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="border bg-light">
+                <div [className]="isActive ? 'serveCourt courtSize' : 'ground courtSize'">
+                    <h3>{{rightBot.player}}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="btn-group btn-group-lg w-100 mt-2" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-secondary" (click)="leftClicked()">Left</button>
+        <button type="button" class="btn btn-secondary" (click)="rightClicked()">Right</button>
+    </div>
+
+</div>
