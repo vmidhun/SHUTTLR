@@ -10,7 +10,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let match of matchService.matchesByTournmentResult; let i = index">
+                <tr *ngFor="let match of Matches; let i = index">
                     <td>{{ i + 1 }}</td>
                     <td class="text-left" (click)="LoadGame(match.ID)">
                         <h4>{{ match.Team1.TeamName }}</h4>

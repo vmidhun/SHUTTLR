@@ -38,11 +38,5 @@ export class MatchService {
   //   );
   // };
 
-  // getMatches = () => {
-  //   this.selectedMatches = Matches;
-  //   console.log(
-  //     "MatchService: getMatches()=>  selectedMatches",
-  //     this.selectedMatches
-  //   );
-  // };
+
 

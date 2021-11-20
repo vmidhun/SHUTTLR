@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { Route, Router } from '@angular/router';
 import { GameService } from 'src/app/services/game.service';
-import { MatchService } from 'src/app/services/match.service';
+import { DoublesMatchService } from 'src/app/services/doublesmatch.service';
 import { TournamentService } from 'src/app/services/tournament.service';
 import { UserService } from 'src/app/services/user.service';
 
@@ -17,7 +17,7 @@ export class ListMatchComponent implements OnInit {
   Tournaments: any;
   selectedTournament: any = {ID: "",UserID: "",TournamentName: ""}
   constructor(
-    public matchService: MatchService,
+    public doublesMatchService: DoublesMatchService,
     public gameService: GameService,
     public userService: UserService,
     public tournamentService:TournamentService,
@@ -27,7 +27,7 @@ export class ListMatchComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.Tournaments = this.matchService.getMatches();
+    this.Matches = this.doublesMatchService.getDoublesMatches();
     //this.loadMathches();
   }
 

@@ -5,7 +5,7 @@ import { DoublesMatch,MatchData} from '../models/match.model'
 @Injectable({
   providedIn: 'root'
 })
-export class DoublesmatchService {
+export class DoublesMatchService {
   selectedDoublesMatch: any
  
   private dbPath = '/doublematches';
@@ -16,7 +16,7 @@ export class DoublesmatchService {
     this.DoublesMatches = db.list(this.dbPath);
   }
 
-  getAll(): AngularFireList<DoublesMatch> {
+  getDoublesMatches(): AngularFireList<DoublesMatch> {
     return this.DoublesMatches;
   }
 

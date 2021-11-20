@@ -32,8 +32,6 @@ import { MatInputModule } from "@angular/material/input";
 import { MatSlideToggleModule } from "@angular/material/slide-toggle";
 import { MatDialogModule } from "@angular/material/dialog";
 
-import { InputTextModule } from 'primeng/inputtext';
-import {TableModule} from 'primeng/table';
 
 @NgModule({
   declarations: [
@@ -65,9 +63,7 @@ import {TableModule} from 'primeng/table';
     MatToolbarModule,
     MatInputModule,
     MatSlideToggleModule,
-    MatDialogModule,
-    InputTextModule,
-    TableModule
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent],

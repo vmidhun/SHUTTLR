@@ -53,7 +53,7 @@ export class ListTournamentComponent implements OnInit, OnChanges {
 
   retrieveTournaments(): void {
     this.tournamentService
-      .getAll()
+      .getTournaments()
       .snapshotChanges()
       .pipe(
         map((changes) =>
